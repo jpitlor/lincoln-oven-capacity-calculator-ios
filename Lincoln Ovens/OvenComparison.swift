@@ -1,4 +1,4 @@
-'//
+//
 //  OvenComparison.swift
 //  Lincoln Ovens
 //
@@ -8,3 +8,7 @@
 
 import Foundation
 import UIKit
+
+class OvenComparison : UIViewController {
+
+}
