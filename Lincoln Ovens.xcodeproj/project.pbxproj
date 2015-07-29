@@ -13,10 +13,13 @@
 		A9882A731B5FDA5B00DA92A5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9882A721B5FDA5B00DA92A5 /* Images.xcassets */; };
 		A9882A761B5FDA5B00DA92A5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9882A741B5FDA5B00DA92A5 /* LaunchScreen.xib */; };
 		A9882A821B5FDA5B00DA92A5 /* Lincoln_OvensTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9882A811B5FDA5B00DA92A5 /* Lincoln_OvensTests.swift */; };
-		A9882ABC1B61369200DA92A5 /* SpecSheetLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9882ABB1B61369200DA92A5 /* SpecSheetLinks.swift */; };
-		A9882ABE1B61369F00DA92A5 /* OvenComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9882ABD1B61369F00DA92A5 /* OvenComparison.swift */; };
-		A9882AC01B6136CB00DA92A5 /* CapacityCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9882ABF1B6136CB00DA92A5 /* CapacityCalculatorView.swift */; };
 		A9882AC21B6136DE00DA92A5 /* CapacityCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9882AC11B6136DE00DA92A5 /* CapacityCalculator.swift */; };
+		A9AD6E6B1B67D38800E819DD /* SpecSheetLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD6E6A1B67D38800E819DD /* SpecSheetLinks.swift */; };
+		A9AD6E6D1B67D41800E819DD /* CapacityCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD6E6C1B67D41800E819DD /* CapacityCalculatorView.swift */; };
+		A9AD6E6F1B67D42400E819DD /* SpecSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD6E6E1B67D42400E819DD /* SpecSheet.swift */; };
+		A9AD6E711B67D43200E819DD /* OvenComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD6E701B67D43200E819DD /* OvenComparison.swift */; };
+		A9AD6EA31B6855B300E819DD /* pdfs.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A9AD6EA21B6855B300E819DD /* pdfs.bundle */; };
+		A9AD6EA51B685ED000E819DD /* manitowocfoodservicelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9AD6EA41B685ED000E819DD /* manitowocfoodservicelogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,17 +36,20 @@
 		A9882A641B5FDA5B00DA92A5 /* Lincoln Ovens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lincoln Ovens.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9882A681B5FDA5B00DA92A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9882A691B5FDA5B00DA92A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A9882A6B1B5FDA5B00DA92A5 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		A9882A6B1B5FDA5B00DA92A5 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; usesTabs = 1; };
 		A9882A701B5FDA5B00DA92A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9882A721B5FDA5B00DA92A5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A9882A751B5FDA5B00DA92A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A9882A7B1B5FDA5B00DA92A5 /* Lincoln OvensTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lincoln OvensTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9882A801B5FDA5B00DA92A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9882A811B5FDA5B00DA92A5 /* Lincoln_OvensTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lincoln_OvensTests.swift; sourceTree = "<group>"; };
-		A9882ABB1B61369200DA92A5 /* SpecSheetLinks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecSheetLinks.swift; sourceTree = "<group>"; };
-		A9882ABD1B61369F00DA92A5 /* OvenComparison.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OvenComparison.swift; sourceTree = "<group>"; };
-		A9882ABF1B6136CB00DA92A5 /* CapacityCalculatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapacityCalculatorView.swift; sourceTree = "<group>"; };
 		A9882AC11B6136DE00DA92A5 /* CapacityCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapacityCalculator.swift; sourceTree = "<group>"; };
+		A9AD6E6A1B67D38800E819DD /* SpecSheetLinks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecSheetLinks.swift; sourceTree = "<group>"; };
+		A9AD6E6C1B67D41800E819DD /* CapacityCalculatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapacityCalculatorView.swift; sourceTree = "<group>"; };
+		A9AD6E6E1B67D42400E819DD /* SpecSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecSheet.swift; sourceTree = "<group>"; };
+		A9AD6E701B67D43200E819DD /* OvenComparison.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OvenComparison.swift; sourceTree = "<group>"; };
+		A9AD6EA21B6855B300E819DD /* pdfs.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = pdfs.bundle; sourceTree = "<group>"; };
+		A9AD6EA41B685ED000E819DD /* manitowocfoodservicelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = manitowocfoodservicelogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,14 +92,17 @@
 			isa = PBXGroup;
 			children = (
 				A9882A691B5FDA5B00DA92A5 /* AppDelegate.swift */,
-				A9882A6B1B5FDA5B00DA92A5 /* MainMenu.swift */,
-				A9882ABB1B61369200DA92A5 /* SpecSheetLinks.swift */,
-				A9882ABD1B61369F00DA92A5 /* OvenComparison.swift */,
-				A9882ABF1B6136CB00DA92A5 /* CapacityCalculatorView.swift */,
 				A9882AC11B6136DE00DA92A5 /* CapacityCalculator.swift */,
-				A9882A6F1B5FDA5B00DA92A5 /* Main.storyboard */,
+				A9AD6E6C1B67D41800E819DD /* CapacityCalculatorView.swift */,
+				A9882A6B1B5FDA5B00DA92A5 /* MainMenu.swift */,
+				A9AD6E701B67D43200E819DD /* OvenComparison.swift */,
+				A9AD6E6E1B67D42400E819DD /* SpecSheet.swift */,
+				A9AD6E6A1B67D38800E819DD /* SpecSheetLinks.swift */,
 				A9882A721B5FDA5B00DA92A5 /* Images.xcassets */,
+				A9AD6EA41B685ED000E819DD /* manitowocfoodservicelogo.png */,
+				A9AD6EA21B6855B300E819DD /* pdfs.bundle */,
 				A9882A741B5FDA5B00DA92A5 /* LaunchScreen.xib */,
+				A9882A6F1B5FDA5B00DA92A5 /* Main.storyboard */,
 				A9882A671B5FDA5B00DA92A5 /* Supporting Files */,
 			);
 			path = "Lincoln Ovens";
@@ -206,6 +215,8 @@
 			files = (
 				A9882A711B5FDA5B00DA92A5 /* Main.storyboard in Resources */,
 				A9882A761B5FDA5B00DA92A5 /* LaunchScreen.xib in Resources */,
+				A9AD6EA51B685ED000E819DD /* manitowocfoodservicelogo.png in Resources */,
+				A9AD6EA31B6855B300E819DD /* pdfs.bundle in Resources */,
 				A9882A731B5FDA5B00DA92A5 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,12 +235,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9AD6E6B1B67D38800E819DD /* SpecSheetLinks.swift in Sources */,
 				A9882A6C1B5FDA5B00DA92A5 /* MainMenu.swift in Sources */,
-				A9882ABC1B61369200DA92A5 /* SpecSheetLinks.swift in Sources */,
-				A9882ABE1B61369F00DA92A5 /* OvenComparison.swift in Sources */,
 				A9882A6A1B5FDA5B00DA92A5 /* AppDelegate.swift in Sources */,
-				A9882AC01B6136CB00DA92A5 /* CapacityCalculatorView.swift in Sources */,
 				A9882AC21B6136DE00DA92A5 /* CapacityCalculator.swift in Sources */,
+				A9AD6E6F1B67D42400E819DD /* SpecSheet.swift in Sources */,
+				A9AD6E711B67D43200E819DD /* OvenComparison.swift in Sources */,
+				A9AD6E6D1B67D41800E819DD /* CapacityCalculatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
