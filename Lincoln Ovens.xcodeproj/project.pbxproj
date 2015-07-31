@@ -20,6 +20,7 @@
 		A9AD6E711B67D43200E819DD /* OvenComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD6E701B67D43200E819DD /* OvenComparison.swift */; };
 		A9AD6EA31B6855B300E819DD /* pdfs.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A9AD6EA21B6855B300E819DD /* pdfs.bundle */; };
 		A9AD6EA51B685ED000E819DD /* manitowocfoodservicelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9AD6EA41B685ED000E819DD /* manitowocfoodservicelogo.png */; };
+		A9AD6EA71B698E5D00E819DD /* ToggleOvensAndProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD6EA61B698E5D00E819DD /* ToggleOvensAndProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		A9AD6E701B67D43200E819DD /* OvenComparison.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OvenComparison.swift; sourceTree = "<group>"; };
 		A9AD6EA21B6855B300E819DD /* pdfs.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = pdfs.bundle; sourceTree = "<group>"; };
 		A9AD6EA41B685ED000E819DD /* manitowocfoodservicelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = manitowocfoodservicelogo.png; sourceTree = "<group>"; };
+		A9AD6EA61B698E5D00E819DD /* ToggleOvensAndProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleOvensAndProperties.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,8 @@
 		A9882A661B5FDA5B00DA92A5 /* Lincoln Ovens */ = {
 			isa = PBXGroup;
 			children = (
+				A9AD6EA21B6855B300E819DD /* pdfs.bundle */,
+				A9AD6EA41B685ED000E819DD /* manitowocfoodservicelogo.png */,
 				A9882A691B5FDA5B00DA92A5 /* AppDelegate.swift */,
 				A9882AC11B6136DE00DA92A5 /* CapacityCalculator.swift */,
 				A9AD6E6C1B67D41800E819DD /* CapacityCalculatorView.swift */,
@@ -98,9 +102,8 @@
 				A9AD6E701B67D43200E819DD /* OvenComparison.swift */,
 				A9AD6E6E1B67D42400E819DD /* SpecSheet.swift */,
 				A9AD6E6A1B67D38800E819DD /* SpecSheetLinks.swift */,
+				A9AD6EA61B698E5D00E819DD /* ToggleOvensAndProperties.swift */,
 				A9882A721B5FDA5B00DA92A5 /* Images.xcassets */,
-				A9AD6EA41B685ED000E819DD /* manitowocfoodservicelogo.png */,
-				A9AD6EA21B6855B300E819DD /* pdfs.bundle */,
 				A9882A741B5FDA5B00DA92A5 /* LaunchScreen.xib */,
 				A9882A6F1B5FDA5B00DA92A5 /* Main.storyboard */,
 				A9882A671B5FDA5B00DA92A5 /* Supporting Files */,
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9AD6E6B1B67D38800E819DD /* SpecSheetLinks.swift in Sources */,
+				A9AD6EA71B698E5D00E819DD /* ToggleOvensAndProperties.swift in Sources */,
 				A9882A6C1B5FDA5B00DA92A5 /* MainMenu.swift in Sources */,
 				A9882A6A1B5FDA5B00DA92A5 /* AppDelegate.swift in Sources */,
 				A9882AC21B6136DE00DA92A5 /* CapacityCalculator.swift in Sources */,

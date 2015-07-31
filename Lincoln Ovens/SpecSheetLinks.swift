@@ -27,15 +27,15 @@ public class SpecSheetLinks: UITableViewController {
 		cell.textLabel!.text = models[indexPath.row] as String
 		return cell
 	}
-
-	override public func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-		// Return false if you do not want the specified item to be editable.
-		return true
-	}
-
+    
 	override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		let specSheet = (segue.destinationViewController as! UINavigationController).topViewController as! SpecSheet
 		let file_name = file_names[self.tableView.indexPathForSelectedRow()!.row]
-		specSheet.setSpecSheet(file_name)
+        let model = models[self.tableView.indexPathForSelectedRow()!.row]
+        specSheet.setSpecSheet(file_name, model: model)
 	}
+    
+    override public func viewWillAppear(animated: Bool) {
+        self.navigationItem.title = "Spec Sheet Links"
+    }
 }

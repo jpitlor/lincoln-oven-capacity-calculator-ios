@@ -81,7 +81,7 @@ public class CapacityCalculatorView: UIViewController {
 		}
 	}
     
-	private func dismiss() {
-
-	}
+    override public func viewDidLoad() {
+        self.navigationItem.title = "Capacity Calculator"
+    }
 }
