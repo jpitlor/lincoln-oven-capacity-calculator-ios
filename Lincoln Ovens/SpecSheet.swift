@@ -12,10 +12,11 @@ import UIKit
 public class SpecSheet: UIViewController {
 	@IBOutlet weak var webView: UIWebView!
 	var fileName: String = ""
+    var model: String = ""
 
-	override public func viewDidLoad() {
-		super.viewDidLoad()
+    override public func viewWillAppear(animated: Bool) {
 		loadSpecSheet()
+        self.navigationItem.title = model + " Spec Sheet"
 	}
 
 	public func loadSpecSheet() {
@@ -25,7 +26,7 @@ public class SpecSheet: UIViewController {
 		}
 	}
 
-	public func setSpecSheet(fileName: String) {
+    public func setSpecSheet(fileName: String, model: String) {
 		self.fileName = fileName
 	}
 }

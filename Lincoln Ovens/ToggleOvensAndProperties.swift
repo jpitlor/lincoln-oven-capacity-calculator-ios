@@ -11,10 +11,10 @@ import UIKit
 
 public class ToggleOvensAndProperties: UITableViewController {
 	let properties = ["Belt Width", "Chamber Length", "Stacking", "Gas Or Electric", "Electric Ventless", "Has Half Pass Door"]
-	let ovens = ["2500", "1100", "1400", "1400", "1600", "3240", "3255", "3270"]
+	let ovens = ["2500", "1100", "1400", "1600", "3240", "3255", "3270"]
 
 	var tempPropertiesChecked = [true, true, true, true, true, true]
-	var tempOvensChecked = [true, true, true, true, true, true, true, true]
+	var tempOvensChecked = [true, true, true, true, true, true, true]
 
 	var isProperty = false
 
@@ -28,21 +28,6 @@ public class ToggleOvensAndProperties: UITableViewController {
 		}
 	}
 
-	override public func viewWillAppear(animated: Bool) {
-		let save = UIBarButtonItem(title: "Save", style: .Plain, target: self, action: Selector("saveArray"))
-		self.navigationItem.rightBarButtonItem = save
-
-		if isProperty {
-			self.navigationItem.title = "Toggle Properties"
-		} else {
-			self.navigationItem.title = "Toggle Ovens"
-		}
-	}
-
-	public func saveArray() {
-		performSegueWithIdentifier("goBackToOvenComparison", sender: self)
-	}
-
 	override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		let arr: Array<Bool>
 		if isProperty {
@@ -54,6 +39,8 @@ public class ToggleOvensAndProperties: UITableViewController {
 		let controllers = segue.destinationViewController.viewControllers!
 
 		(controllers[controllers.count - 1] as! OvenComparison).setArrays(isProperty, vals: arr)
+        
+        self.removeFromParentViewController()
 	}
 
 	override public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -70,7 +57,7 @@ public class ToggleOvensAndProperties: UITableViewController {
 
 	override public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		if (isProperty) {
-			let cell = tableView.dequeueReusableCellWithIdentifier("property", forIndexPath: indexPath) as! UITableViewCell
+			let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
 
 			let label = cell.textLabel!
 			label.text = properties[indexPath.row] as String
@@ -83,7 +70,7 @@ public class ToggleOvensAndProperties: UITableViewController {
 
 			return cell
 		} else {
-			let cell = tableView.dequeueReusableCellWithIdentifier("oven", forIndexPath: indexPath) as! UITableViewCell
+			let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
 
 			let label = cell.textLabel!
 			label.text = ovens[indexPath.row] as String

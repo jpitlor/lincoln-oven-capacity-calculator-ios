@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class CapacityCalculatorView: UIViewController {
+public class CapacityCalculatorView: UIViewController, UIActionSheetDelegate {
 	@IBOutlet weak var panType: UISegmentedControl!
 	@IBOutlet weak var beltWidth: UITextField!
 	@IBOutlet weak var chamberLength: UITextField!
@@ -80,8 +80,56 @@ public class CapacityCalculatorView: UIViewController {
 			panWidth.text = ""
 		}
 	}
-    
-    override public func viewDidLoad() {
-        self.navigationItem.title = "Capacity Calculator"
-    }
+
+	override public func viewDidLoad() {
+		let pickModel = UIBarButtonItem(title: "Choose Model", style: .Plain, target: self, action: "chooseModel:")
+		self.navigationItem.rightBarButtonItem = pickModel
+	}
+
+    public func chooseModel(sender: AnyObject) {
+//        let popup: UIActionSheet = 	UIActionSheet(title: "Choose a Model", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: "2500", "1100", "1400/1600/3240", "3255", "3270", nil)
+//        popup.showFromBarButtonItem(self.navigationItem.rightBarButtonItem, animated: true)
+        
+		let alert = UIAlertController(title: "Choose a Model", message: nil, preferredStyle: .ActionSheet)
+
+		let buttonOne = UIAlertAction(title: "2500", style: .Default, handler: {
+			(action) -> Void in
+			self.beltWidth.text = "16"
+            self.chamberLength.text = "20.5"
+		})
+		let buttonTwo = UIAlertAction(title: "1100", style: .Default, handler: {
+			(action) -> Void in
+			self.beltWidth.text = "18"
+            self.chamberLength.text = "28.25"
+		})
+		let buttonThree = UIAlertAction(title: "1400/1600/3240", style: .Default, handler: {
+			(action) -> Void in
+			self.beltWidth.text = "32"
+            self.chamberLength.text = "40.1875"
+		})
+		let buttonFour = UIAlertAction(title: "3255", style: .Default, handler: {
+			(action) -> Void in
+			self.beltWidth.text = "32"
+            self.chamberLength.text = "55"
+		})
+		let buttonFive = UIAlertAction(title: "3270", style: .Default, handler: {
+			(action) -> Void in
+			self.beltWidth.text = "32"
+            self.chamberLength.text = "70"
+		})
+		let buttonCancel = UIAlertAction(title: "Cancel", style: .Cancel) {
+			(action) -> Void in
+			// Do nothing
+		}
+
+        alert.addAction(buttonOne)
+        alert.addAction(buttonTwo)
+        alert.addAction(buttonThree)
+        alert.addAction(buttonFour)
+        alert.addAction(buttonFive)
+        alert.addAction(buttonCancel)
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+	}
+
 }

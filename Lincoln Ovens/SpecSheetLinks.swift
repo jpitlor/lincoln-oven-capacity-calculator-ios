@@ -34,8 +34,4 @@ public class SpecSheetLinks: UITableViewController {
         let model = models[self.tableView.indexPathForSelectedRow()!.row]
         specSheet.setSpecSheet(file_name, model: model)
 	}
-    
-    override public func viewWillAppear(animated: Bool) {
-        self.navigationItem.title = "Spec Sheet Links"
-    }
 }
