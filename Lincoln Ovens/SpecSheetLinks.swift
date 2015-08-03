@@ -22,7 +22,7 @@ public class SpecSheetLinks: UITableViewController {
 	}
 
 	override public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCellWithIdentifier("specsheet", forIndexPath: indexPath) as! UITableViewCell
+		let cell = tableView.dequeueReusableCellWithIdentifier("specsheet", forIndexPath: indexPath) 
 
 		cell.textLabel!.text = models[indexPath.row] as String
 		return cell
@@ -30,8 +30,8 @@ public class SpecSheetLinks: UITableViewController {
     
 	override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		let specSheet = (segue.destinationViewController as! UINavigationController).topViewController as! SpecSheet
-		let file_name = file_names[self.tableView.indexPathForSelectedRow()!.row]
-        let model = models[self.tableView.indexPathForSelectedRow()!.row]
+		let file_name = file_names[self.tableView.indexPathForSelectedRow!.row]
+        let model = models[self.tableView.indexPathForSelectedRow!.row]
         specSheet.setSpecSheet(file_name, model: model)
 	}
 }

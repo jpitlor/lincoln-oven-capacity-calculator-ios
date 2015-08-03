@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class ToggleOvensAndProperties: UITableViewController {
+public class ToggleOvensAndProperties:UITableViewController {
 	let properties = ["Belt Width", "Chamber Length", "Stacking", "Gas Or Electric", "Electric Ventless", "Has Half Pass Door"]
 	let ovens = ["2500", "1100", "1400", "1600", "3240", "3255", "3270"]
 
@@ -18,9 +18,9 @@ public class ToggleOvensAndProperties: UITableViewController {
 
 	var isProperty = false
 
-	public func setDaScene(val: Bool, arrayOfVals: Array<Bool>) {
+    public func setDaScene(val: Bool, arrayOfVals: Array<Bool>) {
 		isProperty = val
-
+        
 		if val {
 			tempPropertiesChecked = arrayOfVals
 		} else {
@@ -35,13 +35,11 @@ public class ToggleOvensAndProperties: UITableViewController {
 		} else {
 			arr = tempOvensChecked
 		}
-
-		let controllers = segue.destinationViewController.viewControllers!
-
-		(controllers[controllers.count - 1] as! OvenComparison).setArrays(isProperty, vals: arr)
         
-        self.removeFromParentViewController()
-	}
+        let oc = (segue.destinationViewController as! UINavigationController).topViewController as! OvenComparison
+        oc.setArrays(isProperty, vals: arr)
+    
+    }
 
 	override public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 		return 1
@@ -57,7 +55,7 @@ public class ToggleOvensAndProperties: UITableViewController {
 
 	override public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		if (isProperty) {
-			let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+			let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
 
 			let label = cell.textLabel!
 			label.text = properties[indexPath.row] as String
@@ -70,7 +68,7 @@ public class ToggleOvensAndProperties: UITableViewController {
 
 			return cell
 		} else {
-			let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+			let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
 
 			let label = cell.textLabel!
 			label.text = ovens[indexPath.row] as String
@@ -92,11 +90,12 @@ public class ToggleOvensAndProperties: UITableViewController {
 			tempOvensChecked[indexPath.row] = !tempOvensChecked[indexPath.row]
 		}
 
-		var type = tableView.cellForRowAtIndexPath(indexPath)?.accessoryType
+		let type = tableView.cellForRowAtIndexPath(indexPath)?.accessoryType
 		if type == .Checkmark {
 			tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .None
 		} else {
 			tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .Checkmark
 		}
+        self.navigationController?.popViewControllerAnimated(true)
 	}
 }

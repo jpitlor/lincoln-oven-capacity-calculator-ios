@@ -21,20 +21,20 @@ public class CapacityCalculatorView: UIViewController, UIActionSheetDelegate {
 
 	@IBAction func calculateButtonClicked(sender: UIButton) {
 		if errorCheck() {
-			let BW = Double(beltWidth.text.toInt()!)
-			let CL = Double(chamberLength.text.toInt()!)
-			let BT = Double(bakeTime.text.toInt()!)
+			let BW = Double(beltWidth.text!)
+			let CL = Double(chamberLength.text!)
+			let BT = Double(bakeTime.text!)
 			let c: CapacityCalculator
 
 			if panType.selectedSegmentIndex == 0 {
-				let PD = Double(panDiameterOrLength.text.toInt()!)
+				let PD = Double(panDiameterOrLength.text!)
 
-				c = CapacityCalculator(beltWidth: BW, ovenCapacity: CL, bakeTime: BT, panDiameter: PD)
+				c = CapacityCalculator(beltWidth: BW!, ovenCapacity: CL!, bakeTime: BT!, panDiameter: PD!)
 			} else {
-				let PL = Double(panDiameterOrLength.text.toInt()!)
-				let PW = Double(panWidth.text.toInt()!)
+				let PL = Double(panDiameterOrLength.text!)
+				let PW = Double(panWidth.text!)
 
-				c = CapacityCalculator(beltWidth: BW, ovenCapacity: CL, bakeTime: BT, panWidth: PW, panLength: PL)
+				c = CapacityCalculator(beltWidth: BW!, ovenCapacity: CL!, bakeTime: BT!, panWidth: PW!, panLength: PL!)
 			}
 
 			let capacity: Double = c.calculateCapacity()
@@ -61,7 +61,7 @@ public class CapacityCalculatorView: UIViewController, UIActionSheetDelegate {
 			panWidth.text = "0"
 		}
 
-		return !beltWidth.text.isEmpty && !chamberLength.text.isEmpty && !bakeTime.text.isEmpty && !panDiameterOrLength.text.isEmpty && !panWidth.text.isEmpty
+        return !beltWidth.text!.isEmpty && !chamberLength.text!.isEmpty && !bakeTime.text!.isEmpty && !panDiameterOrLength.text!.isEmpty && !panWidth.text!.isEmpty
 	}
 
 	@IBAction func panTypeClicked(sender: AnyObject) {
@@ -86,10 +86,7 @@ public class CapacityCalculatorView: UIViewController, UIActionSheetDelegate {
 		self.navigationItem.rightBarButtonItem = pickModel
 	}
 
-    public func chooseModel(sender: AnyObject) {
-//        let popup: UIActionSheet = 	UIActionSheet(title: "Choose a Model", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: "2500", "1100", "1400/1600/3240", "3255", "3270", nil)
-//        popup.showFromBarButtonItem(self.navigationItem.rightBarButtonItem, animated: true)
-        
+    public func chooseModel(sender: AnyObject) {        
 		let alert = UIAlertController(title: "Choose a Model", message: nil, preferredStyle: .ActionSheet)
 
 		let buttonOne = UIAlertAction(title: "2500", style: .Default, handler: {
@@ -132,4 +129,8 @@ public class CapacityCalculatorView: UIViewController, UIActionSheetDelegate {
         self.presentViewController(alert, animated: true, completion: nil)
 	}
 
+    public func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
