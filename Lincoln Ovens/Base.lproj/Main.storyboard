@@ -363,7 +363,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8d3-Eh-WNR">
-                                <rect key="frame" x="433" y="560" width="122" height="30"/>
+                                <rect key="frame" x="443" y="560" width="122" height="30"/>
                                 <state key="normal" title="Toggle Properties">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -372,7 +372,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIS-iG-ps0">
-                                <rect key="frame" x="45" y="560" width="94" height="30"/>
+                                <rect key="frame" x="35" y="560" width="94" height="30"/>
                                 <state key="normal" title="Toggle Ovens">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -383,6 +383,9 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Voa-2F-bPk">
                                 <rect key="frame" x="66" y="64" width="534" height="488"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="M98-AQ-Iag" id="bo6-eY-v3u"/>
+                                </connections>
                             </webView>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3g-pg-h8h">
                                 <rect key="frame" x="0.0" y="64" width="70" height="488"/>
@@ -391,24 +394,33 @@
                                     <constraint firstAttribute="width" constant="70" id="8nl-GR-TV3"/>
                                 </constraints>
                             </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Cqf-Wx-WZN">
+                                <rect key="frame" x="285" y="285" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="LCe-2o-Yv2"/>
+                                    <constraint firstAttribute="height" constant="30" id="bCS-Aq-nxY"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Voa-2F-bPk" firstAttribute="leading" secondItem="xAk-Uy-dWu" secondAttribute="leadingMargin" constant="82" id="1Zv-NN-TGc"/>
                             <constraint firstItem="iB1-TI-wZZ" firstAttribute="top" secondItem="8d3-Eh-WNR" secondAttribute="bottom" constant="10" id="FAz-yT-5ix"/>
+                            <constraint firstItem="Cqf-Wx-WZN" firstAttribute="centerY" secondItem="xAk-Uy-dWu" secondAttribute="centerY" id="FJe-3c-qdq"/>
                             <constraint firstItem="q3g-pg-h8h" firstAttribute="top" secondItem="01Q-wi-0Cq" secondAttribute="bottom" id="H5j-P8-xoF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Voa-2F-bPk" secondAttribute="trailing" id="HUy-q5-Irj"/>
-                            <constraint firstItem="eIS-iG-ps0" firstAttribute="leading" secondItem="xAk-Uy-dWu" secondAttribute="leadingMargin" constant="25" id="Mdd-5U-OPR"/>
+                            <constraint firstItem="eIS-iG-ps0" firstAttribute="leading" secondItem="xAk-Uy-dWu" secondAttribute="leadingMargin" constant="15" id="Mdd-5U-OPR"/>
                             <constraint firstAttribute="trailing" secondItem="Voa-2F-bPk" secondAttribute="trailing" id="N5Q-uy-orx"/>
                             <constraint firstItem="eIS-iG-ps0" firstAttribute="top" secondItem="Voa-2F-bPk" secondAttribute="bottom" constant="8" id="Nbe-jN-HgD"/>
                             <constraint firstItem="Voa-2F-bPk" firstAttribute="top" secondItem="01Q-wi-0Cq" secondAttribute="bottom" id="Ua1-h6-0Mo"/>
                             <constraint firstItem="q3g-pg-h8h" firstAttribute="leading" secondItem="xAk-Uy-dWu" secondAttribute="leadingMargin" id="ayZ-QY-Moc"/>
+                            <constraint firstItem="Cqf-Wx-WZN" firstAttribute="centerX" secondItem="xAk-Uy-dWu" secondAttribute="centerX" id="e5Q-b1-VL8"/>
                             <constraint firstItem="iB1-TI-wZZ" firstAttribute="top" secondItem="eIS-iG-ps0" secondAttribute="bottom" constant="10" id="eRQ-V8-bMe"/>
                             <constraint firstItem="Voa-2F-bPk" firstAttribute="leading" secondItem="xAk-Uy-dWu" secondAttribute="leadingMargin" id="ehS-zi-3Al"/>
                             <constraint firstItem="q3g-pg-h8h" firstAttribute="leading" secondItem="xAk-Uy-dWu" secondAttribute="leading" id="mow-W4-D6N"/>
                             <constraint firstItem="eIS-iG-ps0" firstAttribute="top" secondItem="q3g-pg-h8h" secondAttribute="bottom" constant="8" symbolic="YES" id="rEo-58-cTv"/>
                             <constraint firstItem="Voa-2F-bPk" firstAttribute="leading" secondItem="xAk-Uy-dWu" secondAttribute="leadingMargin" constant="46" id="rJh-Xe-JT9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8d3-Eh-WNR" secondAttribute="trailing" constant="25" id="sIl-sT-Loz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8d3-Eh-WNR" secondAttribute="trailing" constant="15" id="sIl-sT-Loz"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -422,6 +434,7 @@
                     <navigationItem key="navigationItem" title="Oven Comparison" id="WR2-EB-SaH"/>
                     <connections>
                         <outlet property="ovenModelNameTable" destination="q3g-pg-h8h" id="kzW-k9-5Zi"/>
+                        <outlet property="progressWheel" destination="Cqf-Wx-WZN" id="m1J-R1-gAe"/>
                         <outlet property="webView" destination="Voa-2F-bPk" id="mMU-7q-zvh"/>
                         <segue destination="8Wg-R8-Fzg" kind="unwind" unwindAction="prepareForUnwind:" id="qYq-K8-5yE"/>
                     </connections>
@@ -665,7 +678,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Drz-wt-jwg"/>
+        <segue reference="TWx-hB-64w"/>
         <segue reference="mXR-f8-3nI"/>
-        <segue reference="mdY-yU-Ory"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -53,7 +53,8 @@ public class CapacityCalculatorView: UIViewController, UIActionSheetDelegate {
                     // Do nothing
                 }
                 popup.addAction(OKAction)
-                self.presentViewController(popup, animated: true, completion: nil)            }
+                self.presentViewController(popup, animated: true, completion: nil)
+            }
 		} else {
 			let popup: UIAlertController = UIAlertController(title: "Inputs Missing", message: "Please fill out all of the inputs, then try calculating the capacity again", preferredStyle: .Alert)
 			let OKAction = UIAlertAction(title: "OK", style: .Default) {

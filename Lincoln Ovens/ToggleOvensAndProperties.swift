@@ -19,7 +19,43 @@ public class ToggleOvensAndProperties:UITableViewController {
 	var isProperty = false
     
     @IBAction func save(sender: UIBarButtonItem) {
-        self.performSegueWithIdentifier("save", sender: self)
+        var count = 0
+        if isProperty {
+            for bool in tempPropertiesChecked {
+                if bool {
+                    count++
+                }
+            }
+            if count >= 1 {
+                self.performSegueWithIdentifier("save", sender: self)
+            } else {
+                let popup: UIAlertController = UIAlertController(title: "Please select at least 1 property to view", message: nil, preferredStyle: .Alert)
+                let OKAction = UIAlertAction(title: "OK", style: .Default) {
+                    (action) in
+                    // Do nothing
+                }
+                popup.addAction(OKAction)
+                self.presentViewController(popup, animated: true, completion: nil)
+            }
+        } else {
+            for bool in tempOvensChecked {
+                if bool {
+                    count++
+                }
+            }
+            if count >= 2 {
+                self.performSegueWithIdentifier("save", sender: self)
+            } else {
+                let popup: UIAlertController = UIAlertController(title: "Please select at least 2 ovens to compare", message: nil, preferredStyle: .Alert)
+                let OKAction = UIAlertAction(title: "OK", style: .Default) {
+                    (action) in
+                    // Do nothing
+                }
+                popup.addAction(OKAction)
+                self.presentViewController(popup, animated: true, completion: nil)
+            }        }
+        
+        
     }
     
     @IBAction func cancel(sender: UIBarButtonItem) {

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class OvenComparison: UIViewController {
+public class OvenComparison: UIViewController, UIWebViewDelegate {
     var ovensShowing = [true, true, true, true, true, true, true]
     let ovens = ["2500", "1100", "1400", "1600", "3240", "3255", "3270"]
     
@@ -25,6 +25,8 @@ public class OvenComparison: UIViewController {
     
     @IBOutlet weak var ovenModelNameTable: UIWebView!
     
+    @IBOutlet weak var progressWheel: UIActivityIndicatorView!
+    
 	public func setArrays(isProperties: Bool, vals: Array<Bool>) {
 		if isProperties {
 			propertiesShowing = vals
@@ -33,15 +35,16 @@ public class OvenComparison: UIViewController {
 		}
 	}
     
+    public func webViewDidFinishLoad(webView: UIWebView) {
+        progressWheel.stopAnimating()
+    }
+    
     override public func viewDidAppear(animated: Bool) {
         self.refreshData()
     }
     
-    @IBAction func stoppedLoading() {
-        
-    }
-    
     public func refreshData() {
+        progressWheel.startAnimating()
         let style = "<style>.oven { color: #DC291E; } .prop { color: #002663; } table { color: #000000; } td { padding-right: 15px; text-align: center; }</style>"
        
         var comparisonTable: String = style + "<table><tbody><tr>"
@@ -103,10 +106,7 @@ public class OvenComparison: UIViewController {
         }
         models += "</tbody></table>"
         
-        ovenModelNameTable.stopLoading()
         ovenModelNameTable.loadHTMLString(models, baseURL: nil)
-        
-        webView.stopLoading()
         webView.loadHTMLString(comparisonTable, baseURL: nil)
     }
 
