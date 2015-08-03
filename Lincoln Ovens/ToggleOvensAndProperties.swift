@@ -17,16 +17,38 @@ public class ToggleOvensAndProperties:UITableViewController {
 	var tempOvensChecked = [true, true, true, true, true, true, true]
 
 	var isProperty = false
-
+    
+    @IBAction func save(sender: UIBarButtonItem) {
+        self.performSegueWithIdentifier("save", sender: self)
+    }
+    
+    @IBAction func cancel(sender: UIBarButtonItem) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     public func setDaScene(val: Bool, arrayOfVals: Array<Bool>) {
 		isProperty = val
         
 		if val {
 			tempPropertiesChecked = arrayOfVals
+            self.navigationItem.title = "Toggle Properties"
 		} else {
-			tempOvensChecked = arrayOfVals
+            tempOvensChecked = arrayOfVals
+            self.navigationItem.title = "Toggle Ovens"
 		}
 	}
+    
+    public func get() -> Array<Bool> {
+        if isProperty {
+            return tempPropertiesChecked
+        } else {
+            return tempOvensChecked
+        }
+    }
+    
+    public func getBool() -> Bool {
+        return isProperty
+    }
 
 	override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		let arr: Array<Bool>

@@ -22,51 +22,92 @@ public class OvenComparison: UIViewController {
 	let hasHalfPassDoor = ["No", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes"]
 
     @IBOutlet weak var webView: UIWebView!
-    @IBOutlet weak var ovenModelNameTable: UITableView!
+    
+    @IBOutlet weak var ovenModelNameTable: UIWebView!
     
 	public func setArrays(isProperties: Bool, vals: Array<Bool>) {
 		if isProperties {
 			propertiesShowing = vals
 		} else {
 			ovensShowing = vals
-            (ovenModelNameTable.delegate as! OvenComparisonModelDelegate).set(vals)
 		}
 	}
     
-    override public func viewWillAppear(animated: Bool) {
-        //ovensShowing = (ovenModelNameTable.delegate as! OvenComparisonModelDelegate).get()
-        //ovenModelNameTable.reloadData()
+    override public func viewDidAppear(animated: Bool) {
+        self.refreshData()
+    }
+    
+    @IBAction func stoppedLoading() {
         
-        var html: String = "<table><tbody>"
+    }
+    
+    public func refreshData() {
+        let style = "<style>.oven { color: #DC291E; } .prop { color: #002663; } table { color: #000000; } td { padding-right: 15px; text-align: center; }</style>"
+       
+        var comparisonTable: String = style + "<table><tbody><tr>"
+        
+        if propertiesShowing[0] {
+            comparisonTable += "<td class='prop'><strong>Belt Width</strong></td>"
+        }
+        if propertiesShowing[1] {
+            comparisonTable += "<td class='prop'><strong>Chamber Length</strong></td>"
+        }
+        if propertiesShowing[2] {
+            comparisonTable += "<td class='prop'><strong>Stacking</strong></td>"
+        }
+        if propertiesShowing[3] {
+            comparisonTable += "<td class='prop'><strong>Gas or Electric</strong></td>"
+        }
+        if propertiesShowing[4] {
+            comparisonTable += "<td class='prop'><strong>Electric Ventless</strong></td>"
+        }
+        if propertiesShowing[5] {
+            comparisonTable += "<td class='prop'><strong>Has Half Pass Door</strong></td>"
+        }
+        
+        comparisonTable += "</tr>"
+
         for var index = 0; index < ovens.count; index++ {
             if ovensShowing[index] {
-                html += "<tr>"
+                comparisonTable += "<tr>"
                 
                 if propertiesShowing[0] {
-                    html += "<td>" + belt_widths[index] + "</td>"
+                    comparisonTable += "<td>" + belt_widths[index] + "</td>"
                 }
                 if propertiesShowing[1] {
-                    html += "<td>" + chamber_lengths[index] + "</td>"
+                    comparisonTable += "<td>" + chamber_lengths[index] + "</td>"
                 }
                 if propertiesShowing[2] {
-                    html += "<td>" + stackings[index] + "</td>"
+                    comparisonTable += "<td>" + stackings[index] + "</td>"
                 }
                 if propertiesShowing[3] {
-                    html += "<td>" + gasOrElectric[index] + "</td>"
+                    comparisonTable += "<td>" + gasOrElectric[index] + "</td>"
                 }
                 if propertiesShowing[4] {
-                    html += "<td>" + electricVentless[index] + "</td>"
+                    comparisonTable += "<td>" + electricVentless[index] + "</td>"
                 }
                 if propertiesShowing[5] {
-                    html += "<td>" + hasHalfPassDoor[index] + "</td>"
+                    comparisonTable += "<td>" + hasHalfPassDoor[index] + "</td>"
                 }
                 
-                html += "</tr>"
+                comparisonTable += "</tr>"
             }
         }
-        html += "</tbody></table>"
+        comparisonTable += "</tbody></table>"
         
-        webView.loadHTMLString(html, baseURL: nil)
+        var models = style + "<table><tbody><tr><td class='prop'><br /><strong>Oven<br />Model</strong><br /><br /></td></tr>"
+        for var index = 0; index < ovensShowing.count; index++ {
+            if ovensShowing[index] {
+                models += "<tr><td class='oven'><strong>" + ovens[index] + "</strong></td></tr>"
+            }
+        }
+        models += "</tbody></table>"
+        
+        ovenModelNameTable.stopLoading()
+        ovenModelNameTable.loadHTMLString(models, baseURL: nil)
+        
+        webView.stopLoading()
+        webView.loadHTMLString(comparisonTable, baseURL: nil)
     }
 
 	override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -78,10 +119,4 @@ public class OvenComparison: UIViewController {
             view.setDaScene(true, arrayOfVals: propertiesShowing)
 		}
 	}
-    
-    override public func viewDidLoad() {
-//        let o = OvenComparisonModelDelegate()
-//        ovenModelNameTable.dataSource = o
-//        ovenModelNameTable.delegate = o
-    }
 }

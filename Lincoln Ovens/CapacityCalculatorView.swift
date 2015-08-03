@@ -21,30 +21,39 @@ public class CapacityCalculatorView: UIViewController, UIActionSheetDelegate {
 
 	@IBAction func calculateButtonClicked(sender: UIButton) {
 		if errorCheck() {
-			let BW = Double(beltWidth.text!)
-			let CL = Double(chamberLength.text!)
-			let BT = Double(bakeTime.text!)
-			let c: CapacityCalculator
+            if areAllNumbers() {
+                let BW = Double(beltWidth.text!)
+                let CL = Double(chamberLength.text!)
+                let BT = Double(bakeTime.text!)
+                let c: CapacityCalculator
 
-			if panType.selectedSegmentIndex == 0 {
-				let PD = Double(panDiameterOrLength.text!)
+                if panType.selectedSegmentIndex == 0 {
+                    let PD = Double(panDiameterOrLength.text!)
 
-				c = CapacityCalculator(beltWidth: BW!, ovenCapacity: CL!, bakeTime: BT!, panDiameter: PD!)
-			} else {
-				let PL = Double(panDiameterOrLength.text!)
-				let PW = Double(panWidth.text!)
+                    c = CapacityCalculator(beltWidth: BW!, ovenCapacity: CL!, bakeTime: BT!, panDiameter: PD!)
+                } else {
+                    let PL = Double(panDiameterOrLength.text!)
+                    let PW = Double(panWidth.text!)
+                
+                    c = CapacityCalculator(beltWidth: BW!, ovenCapacity: CL!, bakeTime: BT!, panWidth: PW!, panLength: PL!)
+                }
 
-				c = CapacityCalculator(beltWidth: BW!, ovenCapacity: CL!, bakeTime: BT!, panWidth: PW!, panLength: PL!)
-			}
-
-			let capacity: Double = c.calculateCapacity()
-			let popup: UIAlertController = UIAlertController(title: "The capacity is " + String(format: "%.1f", capacity) + " pans/hour", message: nil, preferredStyle: .Alert)
-			let OKAction = UIAlertAction(title: "OK", style: .Default) {
-				(action) in
-				// Do nothing
-			}
-			popup.addAction(OKAction)
-			self.presentViewController(popup, animated: true, completion: nil)
+                let capacity: Double = c.calculateCapacity()
+                let popup: UIAlertController = UIAlertController(title: "The capacity is " + String(format: "%.1f", capacity) + " pans/hour", message: nil, preferredStyle: .Alert)
+                let OKAction = UIAlertAction(title: "OK", style: .Default) {
+                    (action) in
+                    // Do nothing
+                }
+                popup.addAction(OKAction)
+                self.presentViewController(popup, animated: true, completion: nil)
+            } else {
+                let popup: UIAlertController = UIAlertController(title: "Please make all of the inputs numbers, then try calculating the capacity again", message: nil, preferredStyle: .Alert)
+                let OKAction = UIAlertAction(title: "OK", style: .Default) {
+                    (action) in
+                    // Do nothing
+                }
+                popup.addAction(OKAction)
+                self.presentViewController(popup, animated: true, completion: nil)            }
 		} else {
 			let popup: UIAlertController = UIAlertController(title: "Inputs Missing", message: "Please fill out all of the inputs, then try calculating the capacity again", preferredStyle: .Alert)
 			let OKAction = UIAlertAction(title: "OK", style: .Default) {
@@ -56,6 +65,38 @@ public class CapacityCalculatorView: UIViewController, UIActionSheetDelegate {
 		}
 	}
 
+    private func areAllNumbers() -> Bool {
+        let letters = NSCharacterSet.decimalDigitCharacterSet()
+        
+        for char in beltWidth.text!.unicodeScalars {
+            if !letters.longCharacterIsMember(char.value) {
+                return false
+            }
+        }
+        for char in chamberLength.text!.unicodeScalars {
+            if !letters.longCharacterIsMember(char.value) {
+                return false
+            }
+        }
+        for char in bakeTime.text!.unicodeScalars {
+            if !letters.longCharacterIsMember(char.value) {
+                return false
+            }
+        }
+        for char in panDiameterOrLength.text!.unicodeScalars {
+            if !letters.longCharacterIsMember(char.value) {
+                return false
+            }
+        }
+        for char in panWidth.text!.unicodeScalars {
+            if !letters.longCharacterIsMember(char.value) {
+                return false
+            }
+        }
+        
+        return true
+    }
+    
 	private func errorCheck() -> Bool {
 		if panType.selectedSegmentIndex == 0 {
 			panWidth.text = "0"

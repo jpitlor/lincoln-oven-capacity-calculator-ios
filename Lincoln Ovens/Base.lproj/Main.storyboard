@@ -328,8 +328,8 @@
                                 <exclude reference="xGh-xu-mJF"/>
                                 <exclude reference="Qkd-92-7hn"/>
                                 <exclude reference="g5g-ba-Lhy"/>
-                                <exclude reference="nbv-kd-86N"/>
                                 <exclude reference="aJD-rP-GLU"/>
+                                <exclude reference="nbv-kd-86N"/>
                                 <exclude reference="QFm-dw-HNe"/>
                             </mask>
                         </variation>
@@ -368,9 +368,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ySv-K5-L6h" kind="popoverPresentation" popoverAnchorView="8d3-Eh-WNR" id="RFF-eU-aNx">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="ru2-BD-NkH" kind="presentation" identifier="showToggleProperties" modalPresentationStyle="formSheet" id="TWx-hB-64w"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIS-iG-ps0">
@@ -379,59 +377,51 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ySv-K5-L6h" kind="popoverPresentation" popoverAnchorView="eIS-iG-ps0" id="YHX-Pu-6xe">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="ru2-BD-NkH" kind="presentation" identifier="showToggleOvens" modalPresentationStyle="formSheet" id="mdY-yU-Ory"/>
                                 </connections>
                             </button>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Voa-2F-bPk">
-                                <rect key="frame" x="102" y="64" width="498" height="488"/>
+                                <rect key="frame" x="66" y="64" width="534" height="488"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tqk-zq-rBE">
-                                <rect key="frame" x="0.0" y="64" width="100" height="486"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3g-pg-h8h">
+                                <rect key="frame" x="0.0" y="64" width="70" height="488"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="IDa-2I-eqv"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="bxb-mA-bG4"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="lnR-bw-L2H"/>
+                                    <constraint firstAttribute="width" constant="70" id="8nl-GR-TV3"/>
                                 </constraints>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="oven" id="6IE-qS-h7Z">
-                                        <rect key="frame" x="0.0" y="22" width="100" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6IE-qS-h7Z" id="jQO-X6-S1E">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Voa-2F-bPk" firstAttribute="leading" secondItem="xAk-Uy-dWu" secondAttribute="leadingMargin" constant="82" id="1Zv-NN-TGc"/>
-                            <constraint firstItem="tqk-zq-rBE" firstAttribute="leading" secondItem="xAk-Uy-dWu" secondAttribute="leading" id="2fb-Pm-pdP"/>
-                            <constraint firstItem="eIS-iG-ps0" firstAttribute="top" secondItem="tqk-zq-rBE" secondAttribute="bottom" constant="10" id="Cfw-1T-6AG"/>
-                            <constraint firstItem="tqk-zq-rBE" firstAttribute="top" secondItem="xAk-Uy-dWu" secondAttribute="topMargin" constant="64" id="EDz-vN-yLL"/>
                             <constraint firstItem="iB1-TI-wZZ" firstAttribute="top" secondItem="8d3-Eh-WNR" secondAttribute="bottom" constant="10" id="FAz-yT-5ix"/>
+                            <constraint firstItem="q3g-pg-h8h" firstAttribute="top" secondItem="01Q-wi-0Cq" secondAttribute="bottom" id="H5j-P8-xoF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Voa-2F-bPk" secondAttribute="trailing" id="HUy-q5-Irj"/>
                             <constraint firstItem="eIS-iG-ps0" firstAttribute="leading" secondItem="xAk-Uy-dWu" secondAttribute="leadingMargin" constant="25" id="Mdd-5U-OPR"/>
                             <constraint firstAttribute="trailing" secondItem="Voa-2F-bPk" secondAttribute="trailing" id="N5Q-uy-orx"/>
                             <constraint firstItem="eIS-iG-ps0" firstAttribute="top" secondItem="Voa-2F-bPk" secondAttribute="bottom" constant="8" id="Nbe-jN-HgD"/>
                             <constraint firstItem="Voa-2F-bPk" firstAttribute="top" secondItem="01Q-wi-0Cq" secondAttribute="bottom" id="Ua1-h6-0Mo"/>
+                            <constraint firstItem="q3g-pg-h8h" firstAttribute="leading" secondItem="xAk-Uy-dWu" secondAttribute="leadingMargin" id="ayZ-QY-Moc"/>
                             <constraint firstItem="iB1-TI-wZZ" firstAttribute="top" secondItem="eIS-iG-ps0" secondAttribute="bottom" constant="10" id="eRQ-V8-bMe"/>
+                            <constraint firstItem="Voa-2F-bPk" firstAttribute="leading" secondItem="xAk-Uy-dWu" secondAttribute="leadingMargin" id="ehS-zi-3Al"/>
+                            <constraint firstItem="q3g-pg-h8h" firstAttribute="leading" secondItem="xAk-Uy-dWu" secondAttribute="leading" id="mow-W4-D6N"/>
+                            <constraint firstItem="eIS-iG-ps0" firstAttribute="top" secondItem="q3g-pg-h8h" secondAttribute="bottom" constant="8" symbolic="YES" id="rEo-58-cTv"/>
+                            <constraint firstItem="Voa-2F-bPk" firstAttribute="leading" secondItem="xAk-Uy-dWu" secondAttribute="leadingMargin" constant="46" id="rJh-Xe-JT9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8d3-Eh-WNR" secondAttribute="trailing" constant="25" id="sIl-sT-Loz"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="ayZ-QY-Moc"/>
+                                <exclude reference="1Zv-NN-TGc"/>
                                 <exclude reference="HUy-q5-Irj"/>
+                                <exclude reference="ehS-zi-3Al"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Oven Comparison" id="WR2-EB-SaH"/>
                     <connections>
-                        <outlet property="ovenModelNameTable" destination="tqk-zq-rBE" id="Ai0-Za-LUo"/>
+                        <outlet property="ovenModelNameTable" destination="q3g-pg-h8h" id="kzW-k9-5Zi"/>
                         <outlet property="webView" destination="Voa-2F-bPk" id="mMU-7q-zvh"/>
                         <segue destination="8Wg-R8-Fzg" kind="unwind" unwindAction="prepareForUnwind:" id="qYq-K8-5yE"/>
                     </connections>
@@ -451,7 +441,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="WxM-KZ-cNl">
-                                <rect key="frame" x="0.0" y="22" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="66" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WxM-KZ-cNl" id="nEW-4U-rpX">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -465,12 +455,24 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Alo-b3-n2h">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="xyC-k3-S1q"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="j1b-6f-3Eq">
+                            <connections>
+                                <action selector="cancel:" destination="ySv-K5-L6h" id="UxT-Nc-daA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="xyC-k3-S1q">
+                            <connections>
+                                <action selector="save:" destination="ySv-K5-L6h" id="UhS-wK-p4S"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="AmB-2d-3WC" kind="custom" identifier="save" customClass="SaveSegue" customModule="Lincoln_Ovens" customModuleProvider="target" id="mXR-f8-3nI"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="342-ZY-dxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2923" y="-665"/>
+            <point key="canvasLocation" x="2946" y="-349"/>
         </scene>
         <!--Spec Sheet List-->
         <scene sceneID="RUi-xg-FMs">
@@ -642,9 +644,28 @@
             </objects>
             <point key="canvasLocation" x="2054" y="-3073"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Atu-lY-iyM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ru2-BD-NkH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NDf-Ef-1VX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ySv-K5-L6h" kind="relationship" relationship="rootViewController" id="f0J-am-e0F"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w3H-Ni-gXu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2946" y="-1109"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3Gd-dO-cCg"/>
-        <segue reference="RFF-eU-aNx"/>
+        <segue reference="Drz-wt-jwg"/>
+        <segue reference="mXR-f8-3nI"/>
+        <segue reference="mdY-yU-Ory"/>
     </inferredMetricsTieBreakers>
 </document>
