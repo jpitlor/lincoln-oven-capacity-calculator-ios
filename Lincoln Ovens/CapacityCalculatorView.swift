@@ -70,27 +70,27 @@ public class CapacityCalculatorView: UIViewController, UIActionSheetDelegate {
         let letters = NSCharacterSet.decimalDigitCharacterSet()
         
         for char in beltWidth.text!.unicodeScalars {
-            if !letters.longCharacterIsMember(char.value) {
+            if !letters.longCharacterIsMember(char.value) && char.description != "\".\"" {
                 return false
             }
         }
         for char in chamberLength.text!.unicodeScalars {
-            if !letters.longCharacterIsMember(char.value) {
+            if !letters.longCharacterIsMember(char.value) && char.description != "\".\"" {
                 return false
             }
         }
         for char in bakeTime.text!.unicodeScalars {
-            if !letters.longCharacterIsMember(char.value) {
+            if !letters.longCharacterIsMember(char.value) && char.description != "\".\"" {
                 return false
             }
         }
         for char in panDiameterOrLength.text!.unicodeScalars {
-            if !letters.longCharacterIsMember(char.value) {
+            if !letters.longCharacterIsMember(char.value) && char.description != "\".\"" {
                 return false
             }
         }
         for char in panWidth.text!.unicodeScalars {
-            if !letters.longCharacterIsMember(char.value) {
+            if !letters.longCharacterIsMember(char.value) && char.description != "\".\"" {
                 return false
             }
         }
