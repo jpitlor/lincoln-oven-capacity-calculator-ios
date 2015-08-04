@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 public class OvenComparison: UIViewController, UIWebViewDelegate {
-    var ovensShowing = [true, true, true, true, true, true, true]
+    static var ovensShowing = [true, true, true, true, true, true, true]
     let ovens = ["2500", "1100", "1400", "1600", "3240", "3255", "3270"]
     
-	var propertiesShowing = [true, true, true, true, true, true]
+	static var propertiesShowing = [true, true, true, true, true, true]
 	let belt_widths = ["16", "18", "32", "32", "32" ,"32", "32"]
 	let chamber_lengths = ["20", "28", "40", "40", "40", "55", "70"]
 	let stackings = ["Double", "Triple", "Double", "Triple", "Triple", "Triple", "Triple"]
@@ -29,9 +29,9 @@ public class OvenComparison: UIViewController, UIWebViewDelegate {
     
 	public func setArrays(isProperties: Bool, vals: Array<Bool>) {
 		if isProperties {
-			propertiesShowing = vals
+			OvenComparison.propertiesShowing = vals
 		} else {
-			ovensShowing = vals
+			OvenComparison.ovensShowing = vals
 		}
 	}
     
@@ -45,51 +45,52 @@ public class OvenComparison: UIViewController, UIWebViewDelegate {
     
     public func refreshData() {
         progressWheel.startAnimating()
-        let style = "<style>.oven { color: #DC291E; } .prop { color: #002663; } table { color: #000000; } td { padding-right: 15px; text-align: center; }</style>"
+        
+        let style = "<style>.oven { color: #DC291E; } .prop { color: #002663; height: 85px; } table { color: #000000; } td { padding-right: 15px; text-align: center; }</style>"
        
         var comparisonTable: String = style + "<table><tbody><tr>"
         
-        if propertiesShowing[0] {
+        if OvenComparison.propertiesShowing[0] {
             comparisonTable += "<td class='prop'><strong>Belt Width</strong></td>"
         }
-        if propertiesShowing[1] {
+        if OvenComparison.propertiesShowing[1] {
             comparisonTable += "<td class='prop'><strong>Chamber Length</strong></td>"
         }
-        if propertiesShowing[2] {
+        if OvenComparison.propertiesShowing[2] {
             comparisonTable += "<td class='prop'><strong>Stacking</strong></td>"
         }
-        if propertiesShowing[3] {
+        if OvenComparison.propertiesShowing[3] {
             comparisonTable += "<td class='prop'><strong>Gas or Electric</strong></td>"
         }
-        if propertiesShowing[4] {
+        if OvenComparison.propertiesShowing[4] {
             comparisonTable += "<td class='prop'><strong>Electric Ventless</strong></td>"
         }
-        if propertiesShowing[5] {
+        if OvenComparison.propertiesShowing[5] {
             comparisonTable += "<td class='prop'><strong>Has Half Pass Door</strong></td>"
         }
         
         comparisonTable += "</tr>"
 
         for var index = 0; index < ovens.count; index++ {
-            if ovensShowing[index] {
+            if OvenComparison.ovensShowing[index] {
                 comparisonTable += "<tr>"
                 
-                if propertiesShowing[0] {
+                if OvenComparison.propertiesShowing[0] {
                     comparisonTable += "<td>" + belt_widths[index] + "</td>"
                 }
-                if propertiesShowing[1] {
+                if OvenComparison.propertiesShowing[1] {
                     comparisonTable += "<td>" + chamber_lengths[index] + "</td>"
                 }
-                if propertiesShowing[2] {
+                if OvenComparison.propertiesShowing[2] {
                     comparisonTable += "<td>" + stackings[index] + "</td>"
                 }
-                if propertiesShowing[3] {
+                if OvenComparison.propertiesShowing[3] {
                     comparisonTable += "<td>" + gasOrElectric[index] + "</td>"
                 }
-                if propertiesShowing[4] {
+                if OvenComparison.propertiesShowing[4] {
                     comparisonTable += "<td>" + electricVentless[index] + "</td>"
                 }
-                if propertiesShowing[5] {
+                if OvenComparison.propertiesShowing[5] {
                     comparisonTable += "<td>" + hasHalfPassDoor[index] + "</td>"
                 }
                 
@@ -98,9 +99,9 @@ public class OvenComparison: UIViewController, UIWebViewDelegate {
         }
         comparisonTable += "</tbody></table>"
         
-        var models = style + "<table><tbody><tr><td class='prop'><br /><strong>Oven<br />Model</strong><br /><br /></td></tr>"
-        for var index = 0; index < ovensShowing.count; index++ {
-            if ovensShowing[index] {
+        var models = style + "<table><tbody><tr><td class='prop'><strong>Oven Model</strong></td></tr>"
+        for var index = 0; index < OvenComparison.ovensShowing.count; index++ {
+            if OvenComparison.ovensShowing[index] {
                 models += "<tr><td class='oven'><strong>" + ovens[index] + "</strong></td></tr>"
             }
         }
@@ -113,10 +114,10 @@ public class OvenComparison: UIViewController, UIWebViewDelegate {
 	override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		if segue.identifier == "showToggleOvens" {
 			let view = (segue.destinationViewController as! UINavigationController).topViewController as! ToggleOvensAndProperties
-            view.setDaScene(false, arrayOfVals: ovensShowing)
+            view.setDaScene(false, arrayOfVals: OvenComparison.ovensShowing)
 		} else {
 			let view = (segue.destinationViewController as! UINavigationController).topViewController as! ToggleOvensAndProperties
-            view.setDaScene(true, arrayOfVals: propertiesShowing)
+            view.setDaScene(true, arrayOfVals: OvenComparison.propertiesShowing)
 		}
 	}
 }

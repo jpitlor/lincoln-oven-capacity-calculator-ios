@@ -14,7 +14,7 @@ public class ToggleOvensAndProperties:UITableViewController {
 	let ovens = ["2500", "1100", "1400", "1600", "3240", "3255", "3270"]
 
 	var tempPropertiesChecked = [true, true, true, true, true, true]
-	var tempOvensChecked = [true, true, true, true, true, true, true]
+	var tempOvensChecked = [false, false, false, false, false, false, false]
 
 	var isProperty = false
     
@@ -53,9 +53,8 @@ public class ToggleOvensAndProperties:UITableViewController {
                 }
                 popup.addAction(OKAction)
                 self.presentViewController(popup, animated: true, completion: nil)
-            }        }
-        
-        
+            }
+        }        
     }
     
     @IBAction func cancel(sender: UIBarButtonItem) {
@@ -73,18 +72,6 @@ public class ToggleOvensAndProperties:UITableViewController {
             self.navigationItem.title = "Toggle Ovens"
 		}
 	}
-    
-    public func get() -> Array<Bool> {
-        if isProperty {
-            return tempPropertiesChecked
-        } else {
-            return tempOvensChecked
-        }
-    }
-    
-    public func getBool() -> Bool {
-        return isProperty
-    }
 
 	override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		let arr: Array<Bool>
@@ -148,12 +135,6 @@ public class ToggleOvensAndProperties:UITableViewController {
 			tempOvensChecked[indexPath.row] = !tempOvensChecked[indexPath.row]
 		}
 
-		let type = tableView.cellForRowAtIndexPath(indexPath)?.accessoryType
-		if type == .Checkmark {
-			tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .None
-		} else {
-			tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .Checkmark
-		}
-        self.navigationController?.popViewControllerAnimated(true)
+		self.tableView.reloadData()
 	}
 }

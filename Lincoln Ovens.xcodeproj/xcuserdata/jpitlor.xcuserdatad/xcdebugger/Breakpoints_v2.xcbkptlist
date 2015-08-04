@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lincoln Ovens/ToggleOvensAndProperties.swift"
-            timestampString = "460338538.615412"
+            timestampString = "460342861.443063"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -97,6 +97,272 @@
             endingLineNumber = "106"
             landmarkName = "errorCheck()"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Lincoln Ovens/ToggleOvensAndProperties.swift"
+            timestampString = "460342861.443063"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "prepareForSegue(_:sender:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Lincoln Ovens/OvenComparison.swift"
+            timestampString = "460345186.960098"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "prepareForSegue(_:sender:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Lincoln Ovens/OvenComparison.swift"
+            timestampString = "460345186.960098"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "prepareForSegue(_:sender:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Lincoln Ovens/OvenComparison.swift"
+            timestampString = "460345186.960098"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "prepareForSegue(_:sender:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Lincoln Ovens/OvenComparison.swift"
+            timestampString = "460344523.251588"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "OvenComparison"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Lincoln Ovens/OvenComparison.swift"
+            timestampString = "460343392.239706"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "OvenComparison"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lincoln_Ovens.OvenComparison.propertiesShowing.getter : Swift.Array&lt;Swift.Bool&gt;"
+                  moduleName = "Lincoln Ovens"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jpitlor/Documents/Code/Lincoln%20Ovens/Lincoln%20Ovens/OvenComparison.swift"
+                  timestampString = "460342879.853144"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lincoln_Ovens.OvenComparison.propertiesShowing.setter : Swift.Array&lt;Swift.Bool&gt;"
+                  moduleName = "Lincoln Ovens"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jpitlor/Documents/Code/Lincoln%20Ovens/Lincoln%20Ovens/OvenComparison.swift"
+                  timestampString = "460342879.853358"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lincoln_Ovens.OvenComparison.propertiesShowing.materializeForSet : Swift.Array&lt;Swift.Bool&gt;"
+                  moduleName = "Lincoln Ovens"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jpitlor/Documents/Code/Lincoln%20Ovens/Lincoln%20Ovens/OvenComparison.swift"
+                  timestampString = "460342879.853493"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lincoln_Ovens.OvenComparison.init (Lincoln_Ovens.OvenComparison.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; Lincoln_Ovens.OvenComparison"
+                  moduleName = "Lincoln Ovens"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jpitlor/Documents/Code/Lincoln%20Ovens/Lincoln%20Ovens/OvenComparison.swift"
+                  timestampString = "460342879.853636"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "616">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lincoln_Ovens.OvenComparison.init (Lincoln_Ovens.OvenComparison.Type)(coder : ObjectiveC.NSCoder) -&gt; Swift.Optional&lt;Lincoln_Ovens.OvenComparison&gt;"
+                  moduleName = "Lincoln Ovens"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jpitlor/Documents/Code/Lincoln%20Ovens/Lincoln%20Ovens/OvenComparison.swift"
+                  timestampString = "460342879.853822"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "564">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Lincoln Ovens/OvenComparison.swift"
+            timestampString = "460343392.239706"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "OvenComparison"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lincoln_Ovens.OvenComparison.propertiesShowing.getter : Swift.Array&lt;Swift.Bool&gt;"
+                  moduleName = "Lincoln Ovens"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jpitlor/Documents/Code/Lincoln%20Ovens/Lincoln%20Ovens/OvenComparison.swift"
+                  timestampString = "460342995.515524"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lincoln_Ovens.OvenComparison.propertiesShowing.setter : Swift.Array&lt;Swift.Bool&gt;"
+                  moduleName = "Lincoln Ovens"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jpitlor/Documents/Code/Lincoln%20Ovens/Lincoln%20Ovens/OvenComparison.swift"
+                  timestampString = "460342995.515768"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lincoln_Ovens.OvenComparison.propertiesShowing.materializeForSet : Swift.Array&lt;Swift.Bool&gt;"
+                  moduleName = "Lincoln Ovens"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jpitlor/Documents/Code/Lincoln%20Ovens/Lincoln%20Ovens/OvenComparison.swift"
+                  timestampString = "460342995.515911"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lincoln_Ovens.OvenComparison.init (Lincoln_Ovens.OvenComparison.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; Lincoln_Ovens.OvenComparison"
+                  moduleName = "Lincoln Ovens"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jpitlor/Documents/Code/Lincoln%20Ovens/Lincoln%20Ovens/OvenComparison.swift"
+                  timestampString = "460342995.516063"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "616">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lincoln_Ovens.OvenComparison.init (Lincoln_Ovens.OvenComparison.Type)(coder : ObjectiveC.NSCoder) -&gt; Swift.Optional&lt;Lincoln_Ovens.OvenComparison&gt;"
+                  moduleName = "Lincoln Ovens"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jpitlor/Documents/Code/Lincoln%20Ovens/Lincoln%20Ovens/OvenComparison.swift"
+                  timestampString = "460342995.516237"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "564">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
